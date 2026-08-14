@@ -6,3 +6,13 @@ class Detector:
         self.modelo = YOLO(modelo)
         self.fuente_video = fuente_video
         self.umbral_confianza = umbral_confianza
+
+    def procesar_frame(self, frame):
+        resultados = self.modelo(
+            frame,
+            conf=self.umbral_confianza
+        )
+
+        frame_procesado = resultados[0].plot()
+
+        return frame_procesado
