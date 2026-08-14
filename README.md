@@ -24,7 +24,7 @@ Crear un entorno virtual:
 
 Activar el entorno virtual en Windows:
 
-    source venv\Scripts\activate
+    source .venv\Scripts\activate
 
 Instalar las dependencias:
 
